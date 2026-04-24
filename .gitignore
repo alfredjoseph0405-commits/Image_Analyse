@@ -1,0 +1,38 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Django stuff
+db.sqlite3
+*.log
+
+# Media uploads (your processed files)
+imganalize/media/
+
+# Environment variables
+.env
+
+# IDEs
+.vscode/
+.idea/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Django migrations cache (optional if regenerating often)
+**/migrations/__pycache__/
+
+# Mongo / local dumps (if you ever export)
+*.bson
+*.json
+
+# Static collect output (if used later)
+staticfiles/

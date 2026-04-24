@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Analyser</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'app/style.css' %}">
+</head>
+<body>
+    <form method="POST" enctype="multipart/form-data" action="{% url 'redir' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br><br><br>
+        <button type="submit" name="mod" value="detailsmod">Analyse Image Details</button><br><br>
+        <button type="submit" name="mod" value="exifmod">Analyse EXIF Details</button><br><br>
+        <button type="submit" name="mod" value="bytemod">Analyse File Byte Stream Details</button>
+    </form>
+    <a href="{% url 'history' %}">
+    <button>View History</button>
+    </a>
+</body>
+</html>

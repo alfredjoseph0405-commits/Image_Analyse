@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ tit }}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'app/style.css' %}">
+</head>
+<body>
+
+<h1>Analysis History</h1>
+
+<a href="{% url 'home' %}">
+    <button>Home Page</button>
+</a>
+
+<br><br>
+
+{% for item in history %}
+
+<div class="entry">
+
+    <div class="title">
+        {{ item.tit }}
+    </div>
+
+    <div class="meta">
+        Object ID: {{ item.id }} 
+    </div>
+
+    <table>
+        <tr>
+            <th>Attribute</th>
+            <th>Value</th>
+        </tr>
+
+        {% for key, val in item.res.items %}
+        <tr>
+            <td>{{ key }}</td>
+            <td>{{ val }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+</div>
+
+{% empty %}
+    <p>No history found. The database is empty, like most human intentions after 2 AM.</p>
+{% endfor %}
+
+</body>
+</html>
