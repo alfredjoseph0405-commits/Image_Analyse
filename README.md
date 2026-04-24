@@ -76,12 +76,12 @@ imganalize/
 ├── app/
 │   ├── views.py
 │   ├── util/
+│   ├── mongo.py
 │   ├── templates/app/
 │   │   ├── home.html
 │   │   ├── output.html
 │   │   ├── history.html
 │
-├── mongo.py
 ├── requirements.txt
 └── manage.py
 ```
