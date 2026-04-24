@@ -35,7 +35,7 @@ A Django-based web application that performs file and image analysis, extracts m
 
 ### 1. Clone the repo
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/alfredjoseph0405-commits/Image_Analyse.git
 cd imganalize
 ````
 
