@@ -6,7 +6,6 @@ from django.http import HttpResponseNotAllowed
 from .util.imgutil import analyse_file, extr_exif, byte_anal
 from .mongo import collection
 import datetime
-from copy import deepcopy
 def home(request):
     frm=hfrm()
     return render(request, "app/home.html", {"form":frm})
