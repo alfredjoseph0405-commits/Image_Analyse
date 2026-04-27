@@ -1,7 +1,3 @@
-Here’s a clean, professional setup for both files—so your project looks less like a “random scripts folder” and more like something a human would trust.
-
----
-
 # 📄 `README.md`
 
 ````md
